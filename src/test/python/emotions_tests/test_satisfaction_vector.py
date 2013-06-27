@@ -53,15 +53,15 @@ class TestSatisfactionVector(unittest.TestCase):
                         "expected control point averages {}".format(expected))
 
     def test_count_non_zero(self):
-        self.assertEqual(1, satisfaction_vector.count_non_zero({1: 1}),
+        self.assertEqual(1, satisfaction_vector.count_non_zero_values({1: 1}),
                          "count dict of length 1 is 1")
-        self.assertEqual(0, satisfaction_vector.count_non_zero({1: 0, 2: 0, 3: 0}),
+        self.assertEqual(0, satisfaction_vector.count_non_zero_values({1: 0, 2: 0, 3: 0}),
                          "count dict of zero values is 0")
-        self.assertEqual(2, satisfaction_vector.count_non_zero({1: 1, 2: 2}),
+        self.assertEqual(2, satisfaction_vector.count_non_zero_values({1: 1, 2: 2}),
                          "count dict of 2 values is 2")
 
-#    def test_valence_arousal_from_satisfaction_vector(self):
-#        self.fail("not implemented")
+    def test_valence_arousal_from_satisfaction_vector(self):
+        self.fail("not implemented")
 
     def cp_equal(self, cps1, cps2):
         if not len(cps1) == len(cps2):

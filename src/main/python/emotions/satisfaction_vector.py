@@ -27,7 +27,7 @@ def expression_vector_difference(ev, sv):
     return difference
 
 
-def count_non_zero(thresholds):
+def count_non_zero_values(thresholds):
     count = 0
     for mid in thresholds.keys():
         if not feq(thresholds[mid], 0):
@@ -48,7 +48,7 @@ def control_point_averages(control_points, sv):
     for cp in control_points:
         difference = expression_vector_difference(cp.thresholds, sv)
         average = expression_vector_average(difference,
-                                            count_non_zero(cp.thresholds))
+                                            count_non_zero_values(cp.thresholds))
         cp_averages.append(ControlPointAverage(valence=cp.valence,
                                                arousal=cp.arousal,
                                                average=average))
