@@ -61,6 +61,17 @@ class TestSatisfactionVector(unittest.TestCase):
                          "count dict of 2 values is 2")
 
     def test_valence_arousal_from_satisfaction_vector(self):
+        sv = {1: 0.5, 2: 0.7}
+        control_points = [ControlPoint(-1, 1, {1: 1.0, 2: 1.0}),
+                          ControlPoint(0, 1, {1: 0.5, 2: 0.5}),
+                          ControlPoint(1, 1, {1: 1, 2: 1}),
+                          ControlPoint(-1, 0, {1: 1, 2: 1}),
+                          ControlPoint(0, 0, {1: 0, 2: 0}),
+                          ControlPoint(1, 0, {1: 0, 2: 0.5}),
+                          ControlPoint(-1, -1, {1: 0.5, 2: 0}),
+                          ControlPoint(0, -1, {1: 0.5, 2: 0.5}),
+                          ControlPoint(1, -1, {1: 0.5, 2: 0.5})]
+
         self.fail("not implemented")
 
     def cp_equal(self, cps1, cps2):
