@@ -1,3 +1,9 @@
+NOTE
+====
+
+This is a work-in-progress and NOT READY FOR USE.
+
+It's also been superseded by https://github.com/davesnowdon/emotions-clojure which is where development is currently happening.
 emotions
 ========
 
